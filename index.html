@@ -16,9 +16,9 @@
   <script type="text/javascript">
 
   //To Be Fixed:
+  // User guessing same letter or guessing not a letter does not alert
   //game does not restart
-  //First key pressed is logged under guessesSoFar 
-  //guessesLeft goes to Zero before restarting at 9
+  //First key pressed/restart brings guessesLeft to 8 and is logged under gussesSoFar
   
   //variables
     var wins = 0;
@@ -41,9 +41,11 @@
       if (userGuess === computerChoice) {
           //wins goes up
           wins++;
+          //guessesLeft reset
+          guessesLeft = 9; //is this wrong?
           //New Letter is chosen
-          
-          //guessesSoFar reset
+        
+           //guessesSoFar reset
           guessesSoFar.splice(guess);
         } 
       // If user guesses incorrect letter
@@ -66,6 +68,16 @@
         //guessesSoFar reset
         guessesSoFar.splice(guess);
       }
+      //If user guesses same letter again
+      else if (userGuess === guessesSoFar.indexOf(guess)) {
+        //alert 
+        alert("You've already guessed that! Please guess another letter!");
+      }
+      //If user does not guess a letter 
+      else if (userGuess != autoChoice.indexOf(autoChoice)) {
+        //alert
+        alert ("Please guess a letter!")
+      };
 
         //HTML
         var html =
