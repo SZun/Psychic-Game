@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Psychic Game</title>
+</head>
+
+<body>
+
+  <div id="game">
+    <h1>The Psychic Game</h1>
+    <p>Press any letter to begin!</p>
+  </div>
+
+  <script type="text/javascript">
+
+  //variables
+    var wins = 0;
+    var losses = 0;
+    var guessesLeft = 10;
+    var guessesSoFar = [];
+    var autoChoice = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+    var guess = [];
+    
+    // make this a function?
+    var computerChoice = autoChoice[Math.floor(Math.random() * autoChoice.length)];
+  
+    document.onkeyup = function(userInput) {
+
+      var userGuess = userInput.key;
+      userGuess = userGuess.toLowerCase();
+      guess = userGuess;
+
+      // If user wins
+      if (userGuess === computerChoice) {
+          //wins goes up
+          wins++;
+          //New Letter is chosen
+          
+          //guessesSoFar reset
+          guesses.clear(guessesSoFar);
+        } 
+      // If user guesses incorrect letter
+      else if (userGuess != computerChoice && guessesLeft != 0) {
+          console.log(computerChoice)
+        //Guesses Left lowered  
+        guessesLeft--;
+        //userGuess becomes guessesSoFar
+        guessesSoFar.push(guess);
+        console.log(guess)
+        }
+      // If user looses
+      else if (guessesLeft <= 0) {
+        //Losses goes up
+        losses ++;
+        //guessesLeft reset
+        guessesLeft = 9; //is this wrong?
+        //New Letter is chosen
+        
+        //guessesSoFar reset
+        guessesSoFar.clear(guess); // *ERROR*
+      }
+
+        //HTML
+        var html =
+          "<p>Guess what letter I'm thinking of</p>" +
+          "<p>Wins: "+ wins + "</p>" +
+          "<p>Losses: " + losses + "</p>" +
+          "<p>Guesses Left: " + guessesLeft + "</p>" +
+          "Your Guesses So Far: " + guessesSoFar + "</p>"
+          ;
+
+        // ALLOWS HTML TO WORK
+        document.querySelector("#game").innerHTML = html;
+    
+    };
+
+  </script>
+
+</body>
+
+</html>
