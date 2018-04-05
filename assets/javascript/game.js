@@ -1,8 +1,7 @@
 
 //To Be Fixed:
-// after win/loss, guessesSoFar is recording last guess
 //delay userGuess until on page of game & letter is pressed
-//Last two fucntions not working
+//Last two functions not working
 
 
 //variables
@@ -31,15 +30,15 @@
         guessesLeft = 9; 
         //New Letter is chosen
         computerChoice = autoChoice[Math.floor(Math.random() * autoChoice.length)];
-      }; 
+        //guess reset 
+      }
     // If user guesses incorrect letter
-    if (userGuess != computerChoice && guessesLeft != 0) {
+    else if (userGuess != computerChoice && guessesLeft != 0) {
       console.log(computerChoice)
       //Guesses Left lowered  
       guessesLeft--;
       //userGuess becomes guessesSoFar
       guessesSoFar.push(guess);
-      
     };
     // If user looses
     if (guessesLeft === 0) {
@@ -61,7 +60,7 @@
     //   guess.pop(guess[0])
     // };
     // //If guess is guessed again
-    // if (userGuess === guessSoFar.indexOf()) {
+    // if (userGuess === guessSoFar.indexOf() < 0) {
     //   //alert
     //   alert("You've already guessed that letter! Please try again!")
     //   //Delete last guess
