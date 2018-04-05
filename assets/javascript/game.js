@@ -1,7 +1,8 @@
 
 //To Be Fixed:
 //game does not restart
-//alerts/splicing last guess doesn't work
+//delay userGyess until on page
+//alerts don't wok
 
 //variables
   var wins = 0;
