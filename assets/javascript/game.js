@@ -1,7 +1,7 @@
 
 //To Be Fixed:
-//delay userGuess until on page of game & letter is pressed
-//Last two functions not working
+//First function not working
+//delay guess until on page of game & letter is pressed
 
 
 //variables
@@ -19,6 +19,24 @@
     var userGuess = userInput.key;
     userGuess = userGuess.toLowerCase();
     guess = userGuess;
+    // // //If guess is guessed again
+    // if (guess === guessSoFar[1] || guess === guessSoFar[2] || guess === guessSoFar[3] || guess === guessSoFar[4] || guess === guessSoFar[5] || guess === guessSoFar[6] || guess === guessSoFar[7] || guess === guessSoFar[8]) {
+    //   //alert
+    //   alert("You've already guessed that letter! Please try again!")
+    //   //Delete last guess
+    //   guess.pop(guess[0])
+    //   //Delete last wrong guess
+    //   guessesSoFar.pop(guessesSofar[0])
+    // };
+    //If guess isn't letter, alert 
+    if (guess != "a" && guess != "b" && guess != "c" && guess != "d" && guess != "e" && guess != "f" && guess != "g" && guess != "h" && guess != "i" && guess != "j" && guess != "k" && guess != "l" && guess != "m" && guess != "n" && guess != "o" && guess != "p" && guess != "q" && guess != "r" && guess != "s" && guess != "t" && guess != "u" && guess != "v" && guess != "w" && guess != "x" && guess != "y" && guess != "z") {
+      //alert
+      alert("That isn't a letter! Please guess a letter between A-Z")
+      //Delete last guess
+      guess.pop(guess[0])
+      // Delete last wrongGuess
+      guessesSoFar.pop(guessesSoFar[0])
+    };
     // If user wins
     if (userGuess === computerChoice) {
     console.log(computerChoice)
@@ -30,7 +48,6 @@
         guessesLeft = 9; 
         //New Letter is chosen
         computerChoice = autoChoice[Math.floor(Math.random() * autoChoice.length)];
-        //guess reset 
       }
     // If user guesses incorrect letter
     else if (userGuess != computerChoice && guessesLeft != 0) {
@@ -52,20 +69,6 @@
       //guessesSoFar reset
       guessesSoFar.splice(guess);
     };
-    //If guess isn't letter, alert 
-    // if (userGuess != guess.indexOf(autoChoice)) {
-    //   //alert
-    //   alert("That isn't a letter! Please guess a letter between A-Z")
-    //   //Delete last guess
-    //   guess.pop(guess[0])
-    // };
-    // //If guess is guessed again
-    // if (userGuess === guessSoFar.indexOf() < 0) {
-    //   //alert
-    //   alert("You've already guessed that letter! Please try again!")
-    //   //Delete last guess
-    //   guess.pop(guess[0])
-    // };
    
       //HTML
       var html =
