@@ -47,7 +47,7 @@
         computerChoice = autoChoice[Math.floor(Math.random() * autoChoice.length)];
       }
     // If user guesses incorrect letter
-    else if (userGuess != computerChoice && guessesLeft != 0) {
+    else if (guess != computerChoice && guessesLeft != 0) {
       console.log(computerChoice)
       //Guesses Left lowered  
       guessesLeft--;
