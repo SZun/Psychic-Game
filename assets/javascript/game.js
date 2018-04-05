@@ -1,8 +1,9 @@
 
 //To Be Fixed:
 //game does not restart
-//delay userGuess until on page
-//alerts don't wok
+//Last two fucntions not working
+//delay userGuess until on page of game & letter is pressed
+
 
 //variables
   var wins = 0;
@@ -56,15 +57,15 @@
     else if (userGuess != guess.indexOf(autoChoice)) {
       //alert
       alert("That isn't a letter! Please guess a letter between A-Z")
-      //Delete that letter from guessesSoFar
-      // guessesSoFar.splice(guess[?])
+      //Delete last guess
+      guess.pop(guess[0])
     }
     //If guess is guessed again
     else if (userGuess === guessSoFar.indexOf(guess)) {
       //alert
       alert("You've already guessed that letter! Please try again!")
-      //Delete that letter from guessesSoFar
-      // guessesSoFar.splice(guess[?])
+      //Delete last guess
+      guess.pop(guess[0])
     }
    
       //HTML
