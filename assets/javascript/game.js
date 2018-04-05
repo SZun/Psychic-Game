@@ -2,7 +2,6 @@
 //To Be Fixed:
 //delay guess until on page of game & letter is pressed
 
-
 //variables
   var wins = 0;
   var losses = 0;
