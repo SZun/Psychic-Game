@@ -1,6 +1,5 @@
 
 //To Be Fixed:
-//First function not working
 //delay guess until on page of game & letter is pressed
 
 
@@ -19,15 +18,15 @@
     var userGuess = userInput.key;
     userGuess = userGuess.toLowerCase();
     guess = userGuess;
-    // // //If guess is guessed again
-    // if (guess === guessSoFar[1] || guess === guessSoFar[2] || guess === guessSoFar[3] || guess === guessSoFar[4] || guess === guessSoFar[5] || guess === guessSoFar[6] || guess === guessSoFar[7] || guess === guessSoFar[8]) {
-    //   //alert
-    //   alert("You've already guessed that letter! Please try again!")
-    //   //Delete last guess
-    //   guess.pop(guess[0])
-    //   //Delete last wrong guess
-    //   guessesSoFar.pop(guessesSofar[0])
-    // };
+   
+   
+    //If guess is guessed again
+    if (userGuess === guessesSoFar[0] || userGuess === guessesSoFar[1] || userGuess === guessesSoFar[2] || userGuess === guessesSoFar[3] || userGuess === guessesSoFar[4] || userGuess === guessesSoFar[5] || userGuess === guessesSoFar[6] || userGuess === guessesSoFar[7] || userGuess === guessesSoFar[8]) {
+      //alert
+      alert("You've already guessed that letter! Please try again!")
+      //Delete last guess
+      guess.pop(guess[0])
+    };
     //If guess isn't letter, alert 
     if (guess != "a" && guess != "b" && guess != "c" && guess != "d" && guess != "e" && guess != "f" && guess != "g" && guess != "h" && guess != "i" && guess != "j" && guess != "k" && guess != "l" && guess != "m" && guess != "n" && guess != "o" && guess != "p" && guess != "q" && guess != "r" && guess != "s" && guess != "t" && guess != "u" && guess != "v" && guess != "w" && guess != "x" && guess != "y" && guess != "z") {
       //alert
