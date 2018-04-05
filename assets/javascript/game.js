@@ -1,6 +1,7 @@
 
 //To Be Fixed:
 //game does not restart
+//alerts/splicing last guess doesn't work
 
 //variables
   var wins = 0;
@@ -50,6 +51,20 @@
       //guessesSoFar reset
       guessesSoFar.splice(guess);
     }
+    //If guess isn't letter, alert 
+    else if (userGuess != guess.indexOf(autoChoice)) {
+      //alert
+      alert("That isn't a letter! Please guess a letter between A-Z")
+      //Delete that letter from guessesSoFar
+      // guessesSoFar.splice(guess[?])
+    }
+    //If guess is guessed again
+    else if (userGuess === guessSoFar.indexOf(guess)) {
+      //alert
+      alert("You've already guessed that letter! Please try again!")
+      //Delete that letter from guessesSoFar
+      // guessesSoFar.splice(guess[?])
+    }
    
       //HTML
       var html =
@@ -59,7 +74,7 @@
         "<p class='text'>Losses: " + losses + "</p>" +
         "<p class='text'>Guesses Left: " + guessesLeft + "</p>" +
         "<p class='text'>Your Guesses so far: " + guessesSoFar + "</p>" +
-        '<img  class="crystalBall" src="assets/images/crystal-ball.png" alt="Crystal Ball">' 
+        '<img  class="crystalBall"src="assets/images/crystal-ball.png" alt="Crystal Ball">' 
         ;
       // ALLOWS HTML TO WORK
       document.querySelector("#game").innerHTML = html;
