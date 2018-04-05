@@ -53,12 +53,13 @@
    
       //HTML
       var html =
-        "<h1>The Psychic Game</h1>" +
-        "<p>Guess what letter I'm thinking of</p>" +
-        "<p>Wins: "+ wins + "</p>" +
-        "<p>Losses: " + losses + "</p>" +
-        "<p>Guesses Left: " + guessesLeft + "</p>" +
-        "<p>Your Guesses so far: " + guessesSoFar + "</p>"
+        "<h1 class='header'>The Psychic Game</h1>" +
+        "<p class='text'>Guess what letter I'm thinking of</p>" +
+        "<p class='text'>Wins: "+ wins + "</p>" +
+        "<p class='text'>Losses: " + losses + "</p>" +
+        "<p class='text'>Guesses Left: " + guessesLeft + "</p>" +
+        "<p class='text'>Your Guesses so far: " + guessesSoFar + "</p>" +
+        '<img  class="crystalBall" src="assets/images/crystal-ball.png" alt="Crystal Ball">' 
         ;
       // ALLOWS HTML TO WORK
       document.querySelector("#game").innerHTML = html;
