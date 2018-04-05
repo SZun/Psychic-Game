@@ -1,7 +1,7 @@
 
 //To Be Fixed:
 //game does not restart
-//delay userGyess until on page
+//delay userGuess until on page
 //alerts don't wok
 
 //variables
