@@ -19,7 +19,6 @@
     userGuess = userGuess.toLowerCase();
     guess = userGuess;
    
-   
     //If guess is guessed again
     if (userGuess === guessesSoFar[0] || userGuess === guessesSoFar[1] || userGuess === guessesSoFar[2] || userGuess === guessesSoFar[3] || userGuess === guessesSoFar[4] || userGuess === guessesSoFar[5] || userGuess === guessesSoFar[6] || userGuess === guessesSoFar[7] || userGuess === guessesSoFar[8]) {
       //alert
