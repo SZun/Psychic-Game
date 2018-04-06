@@ -47,7 +47,6 @@
       }
     // If user guesses incorrect letter
     else if (guess != computerChoice && guessesLeft != 0) {
-      console.log(computerChoice)
       //Guesses Left lowered  
       guessesLeft--;
       //userGuess becomes guessesSoFar
