@@ -35,7 +35,6 @@
     };
     // If user wins
     if (userGuess === computerChoice) {
-    console.log(computerChoice)
         //guessesSoFar reset
         guessesSoFar.splice(guess);
         //wins goes up
@@ -54,7 +53,6 @@
     };
     // If user looses
     if (guessesLeft === 0) {
-    console.log(computerChoice)  
       //Losses goes up
       losses ++;
       //guessesLeft reset
